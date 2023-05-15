@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu";
+}
+
+h3 {
+  font-family: "oswald";
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+li {
+  color: #70798c;
+}
+
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 2fr 12fr 1fr;
+  height: 100vh;
+}
+
+.header {
+  background-color: #f5f1ed;
+  padding: 2%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  font-family: "roboto";
+}
+
+.header ul li:hover {
+  margin: 0 10px;
+  color: #ff6600;
+}
+
+.header h3 {
+  margin: 10px;
+  color: #ff6600;
+}
+
+.left-block {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-block ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 200px;
+}
+
+.left-block ul li {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.left-block ul li:hover {
+  color: #ff6600;
+}
+
+.main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  justify-content: center;
+  background-color: #252323;
+  color: #fff;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer span {
+  color: #ff6600;
+}
+
+.plan-button {
+  padding: 10px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pricing-plan {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.plan-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  margin-bottom: 10px;
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 3rem 5fr 3rem;
+  }
+  .header {
+    align-content: center;
+  }
+  .main {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    }
+  .footer {
+      
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+      
+  }
+  .left-block {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    }
+  .left-block ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    }
+    .pricing-container {
+      flex-direction: column;
+    }
+     }
